@@ -1,5 +1,6 @@
 import { X, User, Mail } from "lucide-react";
 import { FormEvent } from "react";
+import { Button } from "../Button/Button";
 
 interface ConfirmTripModalProps {
     closeConfirmTripModal: () => void
@@ -26,27 +27,29 @@ export default function ConfirmTripModal({
                 </div>
 
                 <form onSubmit={createTrip} className="space-y-3">
-                    <div className="h-14.5 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
-                    <User className="text-zinc-400 size-5" />
-                    <input 
-                        type="text" 
-                        name="name" 
-                        placeholder="Seu nome completo" 
-                        className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1"/>
+                    <div className="h-14 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
+                        <User className="text-zinc-400 size-5" />
+                        <input 
+                            type="text" 
+                            name="name" 
+                            placeholder="Seu nome completo" 
+                            className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1"
+                        />
                     </div>
 
-                    <div className="h-14.5 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
-                    <Mail className="text-zinc-400 size-5" />
-                    <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Seu e-mail pessoal" 
-                        className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1"/>
+                    <div className="h-14 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
+                        <Mail className="text-zinc-400 size-5" />
+                        <input 
+                            type="email" 
+                            name="email" 
+                            placeholder="Seu e-mail pessoal" 
+                            className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1"
+                        />
                     </div>
 
-                    <button type='submit' className="bg-lime-300 text-lime-950 w-full justify-center rounded-lg px-5 h-11 font-medium flex items-center gap-2 hover:bg-lime-400">
+                    <Button variant="primary" size='full' type="submit">
                         Confirmar criação da viagem
-                    </button>
+                    </Button>
                 </form>
             </div>
         </div>
